@@ -34,6 +34,9 @@ class _HomeState extends State<Home> {
           height: 35,
         ),
         centerTitle: true,
+        actions: [
+          IconButton(icon: Icon(Icons.shopping_cart), onPressed: (){})
+        ],
       ),
       body: Container(
         height: _tela.height,
