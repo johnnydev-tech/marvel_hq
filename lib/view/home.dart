@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:marvel_hq/controller/comicsController.dart';
 import 'package:marvel_hq/model/comic.dart';
 
+import 'component/drawer.dart';
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -34,10 +36,17 @@ class _HomeState extends State<Home> {
           height: 35,
         ),
         centerTitle: true,
+        iconTheme: IconThemeData(  color: Colors.red ),
         actions: [
-          IconButton(icon: Icon(Icons.shopping_cart), onPressed: (){})
+          IconButton(
+              icon: Icon(
+                Icons.shopping_cart,
+
+              ),
+              onPressed: () {})
         ],
       ),
+      drawer: CustomDrawer(),
       body: Container(
         height: _tela.height,
         width: _tela.width,
