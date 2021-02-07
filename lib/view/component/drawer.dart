@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:marvel_hq/view/home.dart';
 
 class CustomDrawer extends StatefulWidget {
   @override

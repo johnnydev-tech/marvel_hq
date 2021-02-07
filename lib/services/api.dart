@@ -16,9 +16,8 @@ class API {
     hash = generateMd5(timeStamp + privateKey +  publicKey);
   }
 
-  String gerarURL(){
+  String gerarURL(String assunto){
     gerarHash();
-    String assunto = "comics";
     urlFinal = "$url$assunto?ts=$timeStamp&apikey=$publicKey&hash=$hash";
     print(urlFinal);
     return urlFinal;
