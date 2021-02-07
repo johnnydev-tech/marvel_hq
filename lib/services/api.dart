@@ -2,9 +2,11 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 
 class API {
-  //Substitua a publicKEy por sua Chave gerada
+  
+  //Substitua "x" em sua publicKey por sua Chave gerada
   static String publicKey ="x";
-    //Substitua a privateKey por sua Chave gerada
+  
+  //Substitua "x" em sua privateKey por sua Chave gerada
   static String privateKey ="x";
   
   static String urlFinal;
