@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:marvel_hq/controller/comicsController.dart';
 import 'package:marvel_hq/model/comic.dart';
+import 'package:marvel_hq/view/details.dart';
+import 'package:marvel_hq/view/shoppingCart.dart';
 
 import 'component/drawer.dart';
 
@@ -46,7 +48,26 @@ class _HomeState extends State<Home> {
               icon: Icon(
                 Icons.shopping_cart,
               ),
-              onPressed: () {})
+              onPressed: () {
+                Navigator.of(context).push(PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      ShoppingCart(),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    var begin = Offset(0.0, 1.0);
+                    var end = Offset.zero;
+                    var curve = Curves.ease;
+
+                    var tween = Tween(begin: begin, end: end)
+                        .chain(CurveTween(curve: curve));
+
+                    return SlideTransition(
+                      position: animation.drive(tween),
+                      child: child,
+                    );
+                  },
+                ));
+              }),
         ],
       ),
       drawer: CustomDrawer(),
@@ -156,7 +177,19 @@ class _HomeState extends State<Home> {
                                       )
                                     ],
                                   ),
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => Details(
+                                          description: comic.description,
+                                          title: comic.title,
+                                          thumb: comic.thumb,
+                                          extention: comic.extension,
+                                        ),
+                                      ),
+                                    );
+                                  },
                                 ),
                               );
                             }),
@@ -267,7 +300,19 @@ class _HomeState extends State<Home> {
                                       )
                                     ],
                                   ),
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => Details(
+                                          description: comic.description,
+                                          title: comic.title,
+                                          thumb: comic.thumb,
+                                          extention: comic.extension,
+                                        ),
+                                      ),
+                                    );
+                                  },
                                 ),
                               );
                             }),
@@ -278,7 +323,9 @@ class _HomeState extends State<Home> {
                 return Container();
               },
             ),
-            SizedBox(height: 25,)
+            SizedBox(
+              height: 25,
+            )
           ],
         ),
       ),
