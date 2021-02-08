@@ -1,6 +1,6 @@
 # MARVEL HQ
 
-Um projeto utilizando a API da MARVEL utilizando Flutter
+Um projeto utilizando a API da MARVEL com Flutter.
 API: https://developer.marvel.com (faça seu cadatro para obter as chaves de consumo da API)
 
 ## Desenvolvimento
