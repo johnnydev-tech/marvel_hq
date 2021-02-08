@@ -3,8 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:marvel_hq/model/comic.dart';
 import 'package:marvel_hq/services/api.dart';
 
-class APIComics{
-
+class APIComics {
   Future<List<Comic>> getComics() async {
     API api = API();
 
@@ -17,7 +16,7 @@ class APIComics{
       List<Comic> comics = dadosJson["data"]["results"].map<Comic>((map) {
         return Comic.fromJsom(map);
       }).toList();
-     // print(dadosJson["data"]["results"].toString());
+      // print(dadosJson["data"]["results"].toString());
       return comics;
     } else {
       print("resultado:" + response.statusCode.toString());

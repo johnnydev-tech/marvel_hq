@@ -14,14 +14,32 @@ class _CustomDrawerState extends State<CustomDrawer> {
         child: ListView(
           children: [
             DrawerHeader(
-                decoration: BoxDecoration(color: Colors.white12), child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/logo.png")
-                )
+              decoration: BoxDecoration(color: Colors.white12),
+              child: Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("assets/images/logo.png"))),
               ),
-            )),
+            ),
 
+            FlatButton(
+                padding: EdgeInsets.all(16.0),
+                colorBrightness: Brightness.dark,
+                onPressed: () {},
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.shopping_cart,
+                      semanticLabel: "Carrinho de compras",
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.only(left:16.0),
+                      child: Text("Meu Carrinho", style: TextStyle(fontSize: 18),),
+                    )
+                  ],
+                ),
+              )
           ],
         ),
       ),

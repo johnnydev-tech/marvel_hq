@@ -59,7 +59,7 @@ class _HomeState extends State<Home> {
             Container(
               padding: EdgeInsets.all(16),
               child: Text(
-                "Grandes títulos de HQ's",
+                "Principais HQ's",
                 softWrap: true,
                 style: TextStyle(fontSize: 22, color: Colors.white),
               ),
@@ -90,7 +90,7 @@ class _HomeState extends State<Home> {
                       );
                     } else {
                       return Container(
-                        height: 290,
+                        height: 320,
                         width: _tela.width,
                         child: ListView.builder(
                             shrinkWrap: true,
@@ -105,11 +105,11 @@ class _HomeState extends State<Home> {
 
                               return Container(
                                 padding: EdgeInsets.symmetric(horizontal: 8),
-                                width: 200,
+                                width: 180,
                                 child: InkWell(
                                   borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(2),
-                                    topRight: Radius.circular(2),
+                                    topLeft: Radius.circular(3),
+                                    topRight: Radius.circular(3),
                                   ),
                                   splashColor: Colors.red.withOpacity(.5),
                                   child: Column(
@@ -119,36 +119,41 @@ class _HomeState extends State<Home> {
                                       Expanded(
                                         child: Ink(
                                           decoration: BoxDecoration(
+                                            color: Colors.white24,
                                             borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(2),
-                                              topRight: Radius.circular(2),
+                                              topLeft: Radius.circular(3),
+                                              topRight: Radius.circular(3),
                                             ),
                                             image: DecorationImage(
                                               image: NetworkImage(
                                                   "${comic.thumb}.${comic.extension}"),
-                                              fit: BoxFit.cover,
+                                              fit: BoxFit.fill,
                                             ),
                                           ),
                                         ),
                                       ),
                                       Container(
-                                          padding: EdgeInsets.symmetric(
-                                              vertical: 8, horizontal: 5),
-                                          height: 70,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white10,
-                                            borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(2),
-                                              bottomRight: Radius.circular(2),
-                                            ),
+                                        padding: EdgeInsets.symmetric(
+                                            vertical: 8, horizontal: 5),
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white10,
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(3),
+                                            bottomRight: Radius.circular(3),
                                           ),
-                                          child: Text(
-                                            comic.title,
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ))
+                                        ),
+                                        child: Text(
+                                          comic.title,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                          softWrap: true,
+                                          maxLines: 3,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      )
                                     ],
                                   ),
                                   onTap: () {},
@@ -159,12 +164,13 @@ class _HomeState extends State<Home> {
                     }
                     break;
                 }
+                return Container();
               },
             ),
             Container(
               padding: EdgeInsets.all(16),
               child: Text(
-                "Grandes Comic Series",
+                "Principais comics Series",
                 softWrap: true,
                 style: TextStyle(fontSize: 22, color: Colors.white),
               ),
@@ -195,7 +201,7 @@ class _HomeState extends State<Home> {
                       );
                     } else {
                       return Container(
-                        height: 290,
+                        height: 320,
                         width: _tela.width,
                         child: ListView.builder(
                             shrinkWrap: true,
@@ -210,11 +216,11 @@ class _HomeState extends State<Home> {
 
                               return Container(
                                 padding: EdgeInsets.symmetric(horizontal: 8),
-                                width: 200,
+                                width: 180,
                                 child: InkWell(
                                   borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(2),
-                                    topRight: Radius.circular(2),
+                                    topLeft: Radius.circular(3),
+                                    topRight: Radius.circular(3),
                                   ),
                                   splashColor: Colors.red.withOpacity(.5),
                                   child: Column(
@@ -224,36 +230,41 @@ class _HomeState extends State<Home> {
                                       Expanded(
                                         child: Ink(
                                           decoration: BoxDecoration(
+                                            color: Colors.white24,
                                             borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(2),
-                                              topRight: Radius.circular(2),
+                                              topLeft: Radius.circular(3),
+                                              topRight: Radius.circular(3),
                                             ),
                                             image: DecorationImage(
                                               image: NetworkImage(
                                                   "${comic.thumb}.${comic.extension}"),
-                                              fit: BoxFit.cover,
+                                              fit: BoxFit.fill,
                                             ),
                                           ),
                                         ),
                                       ),
                                       Container(
-                                          padding: EdgeInsets.symmetric(
-                                              vertical: 8, horizontal: 5),
-                                          height: 70,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white10,
-                                            borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(2),
-                                              bottomRight: Radius.circular(2),
-                                            ),
+                                        padding: EdgeInsets.symmetric(
+                                            vertical: 8, horizontal: 5),
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white10,
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(3),
+                                            bottomRight: Radius.circular(3),
                                           ),
-                                          child: Text(
-                                            comic.title,
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ))
+                                        ),
+                                        child: Text(
+                                          comic.title,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                          softWrap: true,
+                                          maxLines: 3,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      )
                                     ],
                                   ),
                                   onTap: () {},
@@ -264,8 +275,10 @@ class _HomeState extends State<Home> {
                     }
                     break;
                 }
+                return Container();
               },
             ),
+            SizedBox(height: 25,)
           ],
         ),
       ),
