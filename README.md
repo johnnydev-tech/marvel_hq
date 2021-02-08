@@ -12,15 +12,6 @@ Projeto desenvolvido em **Flutter**, utilizando:
 - [http](https://pub.dev/packages/http)
 - [crypto](https://pub.dev/packages/crypto)
 
-## Desenvolvimento
-
-Projeto desenvolvido em **Flutter**, utilizando:
-
-- [firebase_core](https://pub.dev/packages/firebase_core)
-- [cloud_firestore](https://pub.dev/packages/cloud_firestore)
-- [http](https://pub.dev/packages/http)
-- [mask_text_input_formatter](https://pub.dev/packages/mask_text_input_formatter)
-
 
 ## Demonstração
 
