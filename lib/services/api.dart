@@ -4,10 +4,10 @@ import 'package:crypto/crypto.dart';
 class API {
   
   //Substitua "x" em sua publicKey por sua Chave gerada
-  static String publicKey ="b4307c53b57550d1f534898e32c84e6b";
+  static String publicKey ="x";
   
   //Substitua "x" em sua privateKey por sua Chave gerada
-  static String privateKey ="e4714e5cbd33d703f5123aad07c652620c401278";
+  static String privateKey ="x";
 
   static String urlFinal;
   var url = "http://gateway.marvel.com/v1/public/";
